@@ -12,7 +12,7 @@ HashMap中索引的定位和元素的查找，非常依赖key的hashCode和equal
 
 
 
-通过构造函数初始化，而是在插入时通过扩容初始化，有效防止了初始化HashMap没有数据插入造成空间浪费可能造成内存泄露的情况，第一初始化table时,resize()中对threshold值进行了重新计算= capacity*loadFactor
+不是通过构造函数初始化，而是在插入时通过扩容初始化，有效防止了初始化HashMap没有数据插入造成空间浪费可能造成内存泄露的情况，第一初始化table时,resize()中对threshold值进行了重新计算= capacity*loadFactor
 
 tableSizeFor(initialCapacity)这个方法，返回一个 大于等于 initialCapacity 最小的2的幂次方
 
